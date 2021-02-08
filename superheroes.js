@@ -774,7 +774,6 @@ function showHero(hero) {
   clone.querySelector(".powers").textContent = hero.powers;
   clone.querySelector(".outfit").textContent = hero.outfit;
   clone.querySelector(".mission").textContent = hero.mission;
-  clone.querySelector(".cape").textContent = hero.cape;
   clone.querySelector(".weaknesses").textContent = hero.weaknesses;
   clone.querySelector(".enemies").textContent = hero.enemies;
   clone.querySelector(".sidekick h2").textContent = hero.sidekick.name;
