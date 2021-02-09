@@ -24,7 +24,7 @@ h3 {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 320px));
   gap: 1.5em;
   justify-content: space-around;
   margin: 0 3vw;
@@ -32,6 +32,7 @@ main {
 
 article {
   border: 2px white solid;
+  border-radius: 7px;
   background-color: #f3984f;
   padding: 1vw;
 }
