@@ -769,15 +769,23 @@ superheroes.forEach(showHero);
 function showHero(hero) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
-  clone.querySelector("h1").textContent = hero.alias;
+  clone.querySelector("h2").textContent = hero.alias;
   clone.querySelector("img").src = hero.image;
-  clone.querySelector(".powers").textContent = hero.powers;
-  clone.querySelector(".outfit").textContent = hero.outfit;
-  clone.querySelector(".mission").textContent = hero.mission;
-  clone.querySelector(".weaknesses").textContent = hero.weaknesses;
-  clone.querySelector(".enemies").textContent = hero.enemies;
-  clone.querySelector(".sidekick h2").textContent = hero.sidekick.name;
-  clone.querySelector(".sidekick p").textContent = hero.sidekick.cape;
+  clone.querySelector(".powers").textContent = `Powers: ${hero.powers.join(
+    ", "
+  )}`;
+  clone.querySelector(".outfit").textContent = `Outfit: ${hero.outfit}`;
+  clone.querySelector(".mission").textContent = `Mission: ${hero.mission}`;
+  clone.querySelector(
+    ".weaknesses"
+  ).textContent = `Weaknesses: ${hero.weaknesses.join(", ")}`;
+  clone.querySelector(".enemies").textContent = `Enemies: ${hero.enemies}`;
+  clone.querySelector(
+    ".sidekick h4"
+  ).textContent = `Name: ${hero.sidekick.name}`;
+  clone.querySelector(
+    ".sidekick p"
+  ).textContent = `Cape: ${hero.sidekick.cape}`;
   const parent = document.querySelector("main");
   parent.appendChild(clone);
 }

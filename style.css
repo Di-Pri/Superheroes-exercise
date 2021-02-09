@@ -2,7 +2,36 @@
   box-sizing: border-box; /* 'bxz' */
 }
 
+body {
+  background-color: #0f152e;
+  color: aliceblue;
+  font-family: Verdana, sans-serif;
+}
+
 img {
   max-width: 100%;
-  height: auto;
+}
+
+h1 {
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 1.5em;
+  justify-content: space-around;
+  margin: 0 3vw;
+}
+
+article {
+  border: 2px white solid;
+  background-color: #f3984f;
+  padding: 1vw;
 }
