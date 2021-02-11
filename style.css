@@ -24,7 +24,7 @@ h3 {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 320px));
+  grid-template-columns: repeat(auto-fill, 320px);
   gap: 1.5em;
   justify-content: space-around;
   margin: 0 3vw;
@@ -34,5 +34,11 @@ article {
   border: 2px white solid;
   border-radius: 7px;
   background-color: #f3984f;
-  padding: 1vw;
+  padding: 1em;
+}
+
+.icon {
+  position: absolute;
+  width: 30px;
+  transform: translate(100px, -40px);
 }

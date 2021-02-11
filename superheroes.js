@@ -771,6 +771,7 @@ function showHero(hero) {
   const clone = template.cloneNode(true);
   clone.querySelector("h2").textContent = hero.alias;
   clone.querySelector("img").src = hero.image;
+  clone.querySelector("img").alt = "Profile picture";
   clone.querySelector(".powers").textContent = `Powers: ${hero.powers.join(
     ", "
   )}`;
@@ -786,6 +787,9 @@ function showHero(hero) {
   clone.querySelector(
     ".sidekick p"
   ).textContent = `Cape: ${hero.sidekick.cape}`;
+  if (!hero.sidekick.cape) {
+    clone.querySelector(".icon").remove();
+  }
   const parent = document.querySelector("main");
   parent.appendChild(clone);
 }
